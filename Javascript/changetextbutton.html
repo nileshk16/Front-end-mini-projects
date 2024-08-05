@@ -1,0 +1,12 @@
+<h1 id="text">Name</h1>
+<button onclick="update(event)">John</button>
+<button onclick="update(event)">Hari</button>
+<button onclick="update(event)">Praveen</button>
+
+<script>
+
+    function update(event)
+    {
+        document.getElementById("text").textContent=event.target.textContent
+    }
+</script>

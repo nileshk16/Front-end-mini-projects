@@ -1,0 +1,46 @@
+nav{
+    background-color: black;
+    color:white;
+    text-align: center;
+}
+li,ul{
+    display: inline;
+}
+li:hover{
+    color:gray;
+    cursor: pointer;
+}
+.box{
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    display:inline-block;
+    text-align: center;
+    width: 350px;
+    height: 350px;
+    margin-top: 20px;
+}
+.product{
+    text-align: center;
+}
+.contact{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin-top: 10px;
+}
+.order{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    display: inline;
+}
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: yellow;
+    border: none;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    width: 50%;
+  }

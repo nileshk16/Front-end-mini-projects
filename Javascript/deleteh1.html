@@ -1,0 +1,24 @@
+
+<style>
+    /* Use a class instead of an ID */
+    .one:hover {
+        color: red;
+        cursor: pointer;
+    }
+</style>
+
+<!-- Add class "one" to each <h1> element -->
+<h1 class="one" onclick="del(this)">One</h1>
+<h1 class="one" onclick="del(this)">Two</h1>
+<h1 class="one" onclick="del(this)">Three</h1>
+<h1 class="one" onclick="del(this)">Four</h1>
+<h1 class="one" onclick="del(this)">Five</h1>
+<h1 class="one" onclick="del(this)">Six</h1>
+<h1 class="one" onclick="del(this)">Seven</h1>
+
+<script>
+    function del(event) {
+        // Access the clicked <h1> element through the function parameter
+        event.remove();
+    }
+</script>

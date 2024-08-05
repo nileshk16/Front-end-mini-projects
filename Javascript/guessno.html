@@ -1,0 +1,37 @@
+<h1>Guess the number from 1 to 10</h1>
+<input type="number" id="one">
+<button onclick="checkfn()">Check</button>
+<p id="result">Wait for the result</p>
+<p id="score"></p>
+<script>
+
+    var a=Math.random()
+    var randomno=Math.floor(a*10)+1
+
+    var inputno=document.getElementById("one")
+    var score=document.getElementById("score")
+    var tscore=10
+    function checkfn()
+    {
+    var inputvalue=Number(inputno.value)
+
+    
+
+    if(randomno==inputvalue)
+    {
+        console.log("yes")
+        result.textContent="You are right"        
+        alert("You WON!!")
+        
+        
+    }
+    else
+    {
+        
+        tscore=tscore-1
+        score.textContent="Your score:"+tscore
+        result.textContent="You are wrong!"
+    }
+
+    }
+</script>

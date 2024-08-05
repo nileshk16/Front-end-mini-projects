@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table, th, td{
+  border: 1px solid black;
+  padding: 2px;
+}
+.info{
+    font-weight: bold;
+}
+</style>
+<body>
+    <center>
+    <h1>Student Form</h1>
+
+    <form>
+        <table>
+            <tr>
+                <td class="info">Name</td>
+                <td><input type="text" id="name"></td>
+            </tr>
+            <tr>
+                <td class="info" >Age</td>
+                <td><input type="number" id="age"></td>
+            </tr>
+            <tr>
+                <td class="info" >Gender</td>
+                <td>
+                    <input type="radio" name="Gender" value="Male" id="maleGender">Male
+                    <input type="radio" name="Gender" value="Female" id="femaleGender">Female
+                </td>
+            </tr>
+            <tr>
+                <td class="info">Course</td>
+                <td>
+                <select style="width: 100%;" id="course">
+                    <option value="Python">Python</option>
+                    <option value="Javascript">Javascript</option>
+                    <option value="C">C</option>
+                </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="info">E-mail</td>
+                <td><input type="email" id="email"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                <input type="submit" value="Save" style="width: 100%;background-color:aqua" onclick="savedata(event)">
+                </td> 
+            </tr>
+        </table>
+    </form>
+    
+    <table id="formtable">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Course</th>
+            <th>Gender</th>
+            <th>E-mail</th>
+            <th>Action</th>
+        </tr>
+        
+    </table>
+</center>
+</body>
+</html>
+<script>
+
+      var formtable=document.getElementById("formtable")
+
+      function savedata(event){
+        var name=document.getElementById("name")
+      var age=document.getElementById("age")
+      var maleGenderInput = document.getElementById("maleGender");
+    var femaleGenderInput = document.getElementById("femaleGender");
+      var course=document.getElementById("course")
+      var email=document.getElementById("email")
+
+
+        event.preventDefault()
+        var gender = maleGenderInput.checked ? "Male" : "Female";
+         var d1=document.createElement("tr")
+         d1.innerHTML="<td>"+name.value+"</td>"+"<td>"+age.value+"</td>"+"<td>"+course.value+ "</td>"+"<td>" + gender + "</td>"+"<td>"+email.value+"</td>"+"<td><button onclick= 'deleteRow(event)' style='background-color:red'>Delete</button></td>"
+         formtable.append(d1)
+      }
+      function deleteRow(event){
+        var row = event.target.parentNode.parentNode; // Get the parent row (tr)
+        row.remove(); // Remove the row
+      }
+
+</script>
